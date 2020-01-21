@@ -59,13 +59,13 @@
             padding: 250px 0;
 
             section.header-intro {
-                padding: 0 100px;
+                padding: 0 35px;
 
                 h1 {
                     font-weight: 800;
                     font-size: 67px;
                     line-height: 89px;
-                    font-family: Raleway ExtraBold;
+                    font-family: Raleway;
                 }
 
                 p.header-subtitle {
@@ -73,12 +73,11 @@
                     opacity: 40%;
                     padding: 0 80px;
                     line-height: 37px;
-                    font-family: Raleway Medium;
+                    font-family: Raleway;
                 }
 
                 span {
-                    opacity: 99% ;
-                    font-family: Raleway ExtraBold;
+                    font-family: Raleway;
                 }
             }
         }

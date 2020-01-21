@@ -12,15 +12,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" v-bind:class="{ 'show': show }">
                 <ul class="navbar-nav mr-auto navbar-links main-nav" style="margin-left: auto;">
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/">Why outsource</router-link>
+                        <a class="nav-link" to="/">Why outsource</a>
                     </li>
-                    <li class="nav-item active">
-                        <router-link class="nav-link" to="/page">What you get</router-link>
+                    <li class="nav-item" v-scroll-to="'#about-section'">
+                        <a class="nav-link" to="/page">What you get</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" v-scroll-to="'#tabs-section'">
                         <a class="nav-link" href="/portfolio">What we do</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" v-scroll-to="'#stepper-section'">
                         <a class="nav-link" href="/contact">Working with us</a>
                     </li>
                 </ul>

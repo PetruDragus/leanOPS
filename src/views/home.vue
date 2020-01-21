@@ -71,7 +71,7 @@
             <img class="line-166 d-none d-sm-block" :src="'/images/Path166.svg'">
         </section>
 
-        <section class="dark-section">
+        <section id="dark-section" class="dark-section">
             <img class="line-528 d-none d-sm-none" :src="'/images/Group528.svg'">
             <img class="dark-half-first d-md-none d-lg-none d-xl-none" :src="'/images/Group538.svg'">
             <div class="container">
@@ -124,9 +124,11 @@
             </div>
 
             <img class="dark-half-end d-md-none d-lg-none d-xl-none" :src="'/images/Group499.svg'">
+
+            <span class="dark-section-source d-none d-sm-block">*puppet State of DevOps Report, 2019</span>
         </section>
 
-        <section class="about-section">
+        <section id="about-section" class="about-section">
             <div class="container">
                 <div class="row row-line reverse">
                     <div class="col-md-6 text-box">
@@ -238,7 +240,7 @@
             </div>
         </section>
 
-        <section class="tabs-section" :style="{ 'background': 'url(' + slide1image + ') no-repeat center' }">
+        <section id="tabs-section" class="tabs-section" :style="{ 'background': 'url(' + slide1image + ') no-repeat center' }">
             <div class="container">
                 <h1 class="section-title text-center">DevOps Consultancy and Services</h1>
 
@@ -280,7 +282,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="tab-content">
-                                <div id="public" class="tab-pane fade in active">
+                                <div id="public" class="tab-pane fade in active show">
                                     <div class="row">
                                         <div class="col-md-6 tab-left-content">
                                             <div class="tab-header">
@@ -459,7 +461,7 @@
             </div>
         </section>
 
-        <section class="stepper-section" :style="{ 'background': 'url(' + backgroundImage + ') no-repeat center' }">
+        <section id="stepper-section" class="stepper-section" :style="{ 'background': 'url(' + backgroundImage + ') no-repeat center' }">
             <img class="path-257 d-none d-sm-block" :src="'/images/Path257.svg'">
             <div class="container pt-50">
                 <h1 class="section-title">Working with us</h1>
@@ -470,12 +472,6 @@
                         <span class="bold">Our delivery model is T&M (time and material).</span> <br>
                         Every project gets senior advisory for strategy / planning / failure recovery (2 hours per month).
                     </p>
-                </div>
-
-                <div class="custom-dots">
-                    <div>
-                        <img class="group-515 d-none d-sm-block" :src="'/images/Group515.png'">
-                    </div>
                 </div>
 
                 <!-- Display on small devices -->
@@ -555,89 +551,115 @@
 
                 <!-- Display on large devices -->
                 <div class="d-none d-sm-block">
-                    <carousel :autoplay="false" :nav="false" :dots="true" :items="1">
-                        <div class="row justify-content-center">
-                            <div class="col-md-4 slider-half-part">
-                                <h1 class="slider-list-title">Company Type</h1>
+                    <form-wizard color="#D0FF14" title="" subtitle="" >
+                        <tab-content>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 slider-half-part">
+                                    <h1 class="slider-list-title">Company Type</h1>
 
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">Startup</a>
-                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">Startup</a>
+                                        </li>
 
-                                    <li>
-                                        <a class="btn slider-btn">Small and midsize business</a>
-                                    </li>
+                                        <li>
+                                            <a class="btn slider-btn">Small and midsize business</a>
+                                        </li>
 
-                                    <li>
-                                        <a class="btn slider-btn">Enterprise</a>
-                                    </li>
-                                </ul>
+                                        <li>
+                                            <a class="btn slider-btn">Enterprise</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4  slider-half-part">
+                                    <h1 class="slider-list-title">Assignment Duration</h1>
+
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">3 - 6 months</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="btn slider-btn">6 - 12 months</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="btn slider-btn">12 months</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="btn slider-btn">12+ months</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="col-md-4  slider-half-part">
-                                <h1 class="slider-list-title">Assignment Duration</h1>
+                        </tab-content>
+                        <tab-content>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 slider-half-part">
+                                    <h1 class="slider-list-title">Lorem ipsum</h1>
 
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">3 - 6 months</a>
-                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">Startup</a>
+                                        </li>
 
-                                    <li>
-                                        <a class="btn slider-btn">6 - 12 months</a>
-                                    </li>
+                                        <li>
+                                            <a class="btn slider-btn">Small and midsize business</a>
+                                        </li>
 
-                                    <li>
-                                        <a class="btn slider-btn">12 months</a>
-                                    </li>
+                                        <li>
+                                            <a class="btn slider-btn">Enterprise</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4  slider-half-part">
+                                    <h1 class="slider-list-title">Dolor sit met</h1>
 
-                                    <li>
-                                        <a class="btn slider-btn">12+ months</a>
-                                    </li>
-                                </ul>
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">Startup</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="btn slider-btn">Small and midsize business</a>
+                                        </li>
+
+                                        <li>
+                                            <a class="btn slider-btn">Enterprise</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        </tab-content>
+                        <tab-content>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 slider-half-part">
+                                    <h1 class="slider-list-title">Lorem </h1>
 
-                        <div class="row justify-content-center">
-                            <div class="col-md-4 slider-half-part">
-                                <h1 class="slider-list-title">Company Type</h1>
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">Enterprise</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4  slider-half-part">
+                                    <h1 class="slider-list-title">Ipsum dolor met</h1>
 
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">Startup</a>
-                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a class="btn slider-btn">3 - 6 months</a>
+                                        </li>
 
-                                    <li>
-                                        <a class="btn slider-btn">Small and midsize business</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">Enterprise</a>
-                                    </li>
-                                </ul>
+                                        <li>
+                                            <a class="btn slider-btn">12+ months</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="col-md-4  slider-half-part">
-                                <h1 class="slider-list-title">Assignment Duration</h1>
+                        </tab-content>
+                    </form-wizard>
 
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">3 - 6 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">6 - 12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12+ months</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </carousel>
                 </div>
             </div>
 
@@ -706,7 +728,7 @@
             padding: 250px 0;
 
             section.header-intro {
-                padding: 0 100px;
+                padding: 0 35px;
 
                 h1 {
                     font-weight: 800;
@@ -719,10 +741,11 @@
                     opacity: 40%;
                     padding: 0 70px;
                     line-height: 37px;
+                    color: #1E1E1E;
                 }
 
                 span {
-                    opacity: 99% !important;
+                    opacity: 100% !important;
                 }
             }
         }
@@ -842,6 +865,20 @@
             width: 240px;
             top: -11.7rem;
             left: 4rem;
+        }
+
+        span.dark-section-source {
+            position: absolute;
+            bottom: 1rem;
+            color: #DBDBDB;
+            left: 1rem;
+            text-align: left;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0;
+            opacity: 0.41;
+            margin-left: 25px;
         }
     }
 
@@ -964,10 +1001,6 @@
     }
 
     section.tabs-section {
-            /* margin: 35px 0; */
-            /* width: 100%; */
-            /* background-size: 105% auto !important; */
-            /* padding-bottom: 200px; */
         padding: 0 0;
         margin: 0;
         /* width: 100%; */
@@ -991,6 +1024,7 @@
             font-family: Raleway, ExtraBold;
             font-weight: 800;
         }
+
         .nav-tabs {
             border: none;
         }
@@ -1189,6 +1223,76 @@
             bottom: 20%;
             right: -18rem;
         }
+
+        div#step-0,
+        div#step-1,
+        div#step-2 {
+            box-shadow: -9px -5px 22px -9px #525352 !important;
+            background: #1E1E1E !important;
+            border: none;
+            color: #ECECEC;
+            outline: none !important;
+
+            .wizard-icon-container {
+                border-radius: 50% !important;
+                background-color: #1E1E1E !important;
+            }
+
+            i.wizard-icon {
+                opacity: 19%;
+            }
+
+            .wizard-icon-container, wizard-icon-circle {
+                box-shadow: -9px -5px 22px -9px rgba(82,83,82,1);
+            }
+        }
+
+        .wizard-icon-circle {
+            width: 100px !important;
+            height: 100px !important;
+            font-size: 35px;
+        }
+
+        .wizard-progress-with-circle {
+            position: relative;
+            top: 55px;
+            height: 3px;
+        }
+
+        .wizard-progress-with-circle {
+            top: 50px !important;
+        }
+
+        .wizard-card-footer button.wizard-btn {
+            color: #525352 !important;
+            font-family: Raleway;
+        }
+
+        /*.wizard-progress-bar {*/
+        /*    width: 69% !important;*/
+        /*    text-align: center !important;*/
+        /*    margin-left: 15% !important;*/
+
+        /*}*/
+
+        .wizard-progress-with-circle {
+            position: relative;
+            top: 50px !important;
+            height: 4px;
+        }
+
+        li.active {
+            /* opacity: 0.19; */
+            div#step-0,
+            div#step-1,
+            div#step-2 {
+                .wizard-icon-container {
+                    i.wizard-icon {
+                         opacity: 1.0;
+                    }
+                }
+            }
+        }
     }
 
     // Small devices
@@ -1356,6 +1460,10 @@
             background: none !important;
             padding-left: 0 !important;
             padding-right: 0 !important;
+
+            .wizard-card-footer {
+                display: none !important;
+             }
 
             h1.section-title.text-center {
                 font-size: 28px;
