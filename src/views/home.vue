@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <img class="left-line" :src="'/images/Group21.svg'">
+            <img class="left-line d-sm-none" :src="'/images/Group21.svg'">
             <img class="second-line d-none d-sm-block" :src="'/images/Path183.svg'">
             <img class="second-line d-md-none d-lg-none" :src="'/images/Path360.svg'">
         </section>
@@ -50,11 +50,11 @@
 
             <div class="container">
                 <div class="row reverse">
-                    <div class="col-md-6">
+                    <div class="col-sm-6 col-md-6">
                         <img class="devops-image" :src="'/images/america@2x.png'">
                     </div>
 
-                    <div class="col-md-6 mx-auto">
+                    <div class="col-sm-6 col-md-6">
                         <div class="section-content">
                             <h1 class="section-title">That’s where <span class="bold">LeanOps</span> comes in.</h1>
 
@@ -72,7 +72,7 @@
         </section>
 
         <section class="dark-section">
-            <img class="line-528 d-none d-sm-block" :src="'/images/Group528.svg'">
+            <img class="line-528 d-none d-sm-none" :src="'/images/Group528.svg'">
             <img class="dark-half-first d-md-none d-lg-none d-xl-none" :src="'/images/Group538.svg'">
             <div class="container">
                 <h1>What should you expect from outsourcing Devops to LeanOps</h1>
@@ -250,7 +250,7 @@
                 <!-- Hide on small devices -->
                 <div class="d-none d-sm-block">
                     <div class="row">
-                        <div class="col-md-6 mx-auto">
+                        <div class="col-sm-8 col-md-6 mx-auto">
                             <div class="row">
                                 <ul class="nav nav-tabs mx-auto">
                                     <li class="active">
@@ -300,7 +300,7 @@
                                         </div>
 
                                         <div class="col-md-6 tab-right-content text-right">
-                                            <img class="tabs-img-body" :src="'/images/start@2x.png'">
+                                            <img class="tabs-img-body d-sm-none" :src="'/images/start@2x.png'">
                                         </div>
                                     </div>
                                 </div>
@@ -322,7 +322,7 @@
                                         </div>
 
                                         <div class="col-md-6 tab-right-content text-right">
-                                            <img class="tabs-img-body" :src="'/images/start@2x.png'">
+                                            <img class="tabs-img-body d-sm-none" :src="'/images/start@2x.png'">
                                         </div>
                                     </div>
                                 </div>
@@ -346,7 +346,7 @@
                                         </div>
 
                                         <div class="col-md-6 tab-right-content text-right">
-                                            <img class="tabs-img-body" :src="'/images/start@2x.png'">
+                                            <img class="tabs-img-body d-sm-none" :src="'/images/start@2x.png'">
                                         </div>
                                     </div>
                                 </div>
@@ -366,8 +366,8 @@
                 </div>
             </div>
 
+            <!-- Hide on medium/large devices -->
             <div class="container-fluid d-md-none d-lg-none d-xl-none">
-                <!-- Hide on medium/large devices -->
                 <div class="row">
                     <foldable class="my-foldable col-12 col-md-4" height="%50" async>
                         <!-- default slot -->
@@ -391,43 +391,10 @@
                             </ul>
                         </div>
 
-
-
-                            <!-- named slot -->
-                            <p align="right" class="my-foldable"
-                               slot="view-more" slot-scope="{ toggle, collapsed }" @click="toggle">
-                                {{ collapsed ? 'More details' : 'Less details' }}
-                            </p>
-
-
-                    </foldable>
-
-                    <foldable class="my-foldable col-12 col-md-4" height="%50" async>
-                        <!-- default slot -->
-                        <div>
-                            <div>
-                                <img class="foldable-img" :src="'/images/Path97.svg'">
-                            </div>
-                            <div class="tab-header">
-                                <h1>Plan, build, create</h1>
-                                <h5>Designed for <span class="bold">new projects</span> and agile beginnings.</h5>
-                            </div>
-                            <ul class="tab-body">
-                                <li>Determining which of the leading cloud vendors is right for your business and technology needs</li>
-                                <li>Plan for transparent and predictable Cloud spending</li>
-                                <li>Implementing devops for faster time-to-market of new features</li>
-                                <li>Using and developing modern, best of breed technologies around infrastructure automation in public and hybrid cloud.</li>
-                                <li>Implementing fully automated CI/CD Pipelines</li>
-                                <li>Providing supervision and technical expertise for individual agile teams around DevOps best practices and approaches</li>
-                                <li>Participating in various aspects of product development life cycle including architecture, development, deployment, configuration, launch and operational support phases</li>
-                                <li>Helping define and enforce DevOps standards, procedures and guidelines</li>
-                            </ul>
-                        </div>
-
                         <!-- named slot -->
-                        <p align="right" class="my-foldable"
+                        <p align="center" class="my-foldable"
                            slot="view-more" slot-scope="{ toggle, collapsed }" @click="toggle">
-                            {{ collapsed ? 'More Details' : 'Fold it!' }}
+                            {{ collapsed ? 'See more' : 'Fold it!' }}
                         </p>
                     </foldable>
 
@@ -454,9 +421,38 @@
                         </div>
 
                         <!-- named slot -->
-                        <p align="right" class="my-foldable"
+                        <p align="center" class="my-foldable"
                            slot="view-more" slot-scope="{ toggle, collapsed }" @click="toggle">
-                            {{ collapsed ? 'More Details' : 'Fold it!' }}
+                            {{ collapsed ? 'See more' : 'Fold it!' }}
+                        </p>
+                    </foldable>
+
+                    <foldable class="my-foldable col-12 col-md-4" height="%50" async>
+                        <!-- default slot -->
+                        <div>
+                            <div>
+                                <img class="foldable-img" :src="'/images/Path97.svg'">
+                            </div>
+                            <div class="tab-header">
+                                <h1>Plan, build, create</h1>
+                                <h5>Designed for <span class="bold">new projects</span> and agile beginnings.</h5>
+                            </div>
+                            <ul class="tab-body">
+                                <li>Determining which of the leading cloud vendors is right for your business and technology needs</li>
+                                <li>Plan for transparent and predictable Cloud spending</li>
+                                <li>Implementing devops for faster time-to-market of new features</li>
+                                <li>Using and developing modern, best of breed technologies around infrastructure automation in public and hybrid cloud.</li>
+                                <li>Implementing fully automated CI/CD Pipelines</li>
+                                <li>Providing supervision and technical expertise for individual agile teams around DevOps best practices and approaches</li>
+                                <li>Participating in various aspects of product development life cycle including architecture, development, deployment, configuration, launch and operational support phases</li>
+                                <li>Helping define and enforce DevOps standards, procedures and guidelines</li>
+                            </ul>
+                        </div>
+
+                        <!-- named slot -->
+                        <p align="center" class="my-foldable"
+                           slot="view-more" slot-scope="{ toggle, collapsed }" @click="toggle">
+                            {{ collapsed ? 'See more' : 'Fold it!' }}
                         </p>
                     </foldable>
                 </div>
@@ -482,91 +478,167 @@
                     </div>
                 </div>
 
-                <carousel :autoplay="false" :nav="false" :dots="true" :items="1">
+                <!-- Display on small devices -->
+                <div class="d-md-none d-lg-none d-xl-none mx-auto text-center">
+                    <carousel :autoplay="false" :nav="false" :dots="true" :items="1">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 slider-half-part">
+                                <h1 class="slider-list-title">02. Assignment Duration</h1>
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 slider-half-part">
-                            <h1 class="slider-list-title">Company Type</h1>
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">3 - 6 months</a>
+                                    </li>
 
-                            <ul>
-                                <li>
-                                    <a class="btn slider-btn">Startup</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">6 - 12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">Small and midsize business</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">Enterprise</a>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <a class="btn slider-btn">12+ months</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-4  slider-half-part">
-                            <h1 class="slider-list-title">Assignment Duration</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 slider-half-part">
+                                <h1 class="slider-list-title">02. Assignment Duration</h1>
 
-                            <ul>
-                                <li>
-                                    <a class="btn slider-btn">3 - 6 months</a>
-                                </li>
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">3 - 6 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">6 - 12 months</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">6 - 12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">12 months</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">12+ months</a>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <a class="btn slider-btn">12+ months</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 slider-half-part">
+                                <h1 class="slider-list-title">02. Assignment Duration</h1>
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 slider-half-part">
-                            <h1 class="slider-list-title">Company Type</h1>
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">3 - 6 months</a>
+                                    </li>
 
-                            <ul>
-                                <li>
-                                    <a class="btn slider-btn">Startup</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">6 - 12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">Small and midsize business</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">12 months</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">Enterprise</a>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <a class="btn slider-btn">12+ months</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-md-4  slider-half-part">
-                            <h1 class="slider-list-title">Assignment Duration</h1>
+                    </carousel>
+                </div>
 
-                            <ul>
-                                <li>
-                                    <a class="btn slider-btn">3 - 6 months</a>
-                                </li>
+                <!-- Display on large devices -->
+                <div class="d-none d-sm-block">
+                    <carousel :autoplay="false" :nav="false" :dots="true" :items="1">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 slider-half-part">
+                                <h1 class="slider-list-title">Company Type</h1>
 
-                                <li>
-                                    <a class="btn slider-btn">6 - 12 months</a>
-                                </li>
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">Startup</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">12 months</a>
-                                </li>
+                                    <li>
+                                        <a class="btn slider-btn">Small and midsize business</a>
+                                    </li>
 
-                                <li>
-                                    <a class="btn slider-btn">12+ months</a>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <a class="btn slider-btn">Enterprise</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4  slider-half-part">
+                                <h1 class="slider-list-title">Assignment Duration</h1>
+
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">3 - 6 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">6 - 12 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">12 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">12+ months</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                </carousel>
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 slider-half-part">
+                                <h1 class="slider-list-title">Company Type</h1>
+
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">Startup</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">Small and midsize business</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">Enterprise</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4  slider-half-part">
+                                <h1 class="slider-list-title">Assignment Duration</h1>
+
+                                <ul>
+                                    <li>
+                                        <a class="btn slider-btn">3 - 6 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">6 - 12 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">12 months</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="btn slider-btn">12+ months</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </carousel>
+                </div>
             </div>
 
             <img class="path-259 d-none d-sm-block" :src="'/images/Path259.svg'">
@@ -1120,7 +1192,7 @@
     }
 
     // Small devices
-    @media only screen and (max-width: 797px) {
+    @media only screen and (max-width: 767px) {
         section {
             padding-left: 20px !important;
             padding-right: 20px !important;
@@ -1320,8 +1392,9 @@
                     font-family: Raleway, bold;
                     font-weight: 600;
                     margin-top: 75px;
-                    margin-bottom: 15px;
                     cursor: pointer;
+                    text-align: center;
+                    margin-bottom: 0;
                 }
 
                 .vue-foldable-container {
@@ -1367,8 +1440,9 @@
                         opacity: 1;
                         color: #949494;
                         font-family: Roboto Condensed;
+                        list-style: disc;
                     }
-                    }
+                }
 
                 img.foldable-img {
                     width: 100px;
@@ -1386,6 +1460,225 @@
 
         section.stepper-section {
             background-size: 109% 125% !important;
+
+            .slider-half-part {
+                h1.slider-list-title {
+                    text-align: center !important;
+                    letter-spacing: 0;
+                    color: #D0FF14;
+                    font-size: 16px;
+                    line-height: 21px;
+                    font-family: Raleway, bold;
+                    font-weight: 700;
+                    margin-top: 45px;
+                }
+
+                ul {
+                    li {
+                        a {
+                            text-align: center !important;
+                        }
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 25px;
+
+                button.owl-dot {
+                    span {
+                        background: transparent;
+                        border: 1px solid #D0FF14;
+                    }
+                }
+                
+                button.owl-dot.active {
+                    span {
+                        background-color: #D0FF14;
+                    }
+                }
+            }
+        }
+    }
+
+    // Medium screens (iPad)
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+        .main {
+            .hero-area {
+                padding: 150px 0;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+
+                section.header-intro {
+                    padding: 0 !important;
+                }
+            }
+
+            img.second-line {
+                position: absolute;
+                right: 8%;
+                top: 71%;
+                width: 250px;
+            }
+        }
+
+        section {
+            h1.section-title {
+                font-size: 36px !important;
+                line-height: 40px !important;
+                width: 100% !important;
+            }
+        }
+
+        section.leanOps-comes-in {
+            img.middle-line {
+                width: 115px;
+                position: absolute;
+                top: -46%;
+                left: 44%;
+            }
+
+            img.line-166 {
+                position: absolute;
+                top: -15%;
+                width: 175px;
+                left: 4%;
+            }
+
+            img.third-line {
+                position: absolute;
+                top: -50%;
+                right: 3rem;
+                width: 115px;
+            }
+        }
+
+        section.dark-section {
+            h1 {
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .green-box {
+                h2.box-content {
+                    font-size: 72px;
+                    color: #D0FF14;
+                    line-height: 48px;
+                    font-weight: 500;
+                    font-family: Roboto, Condensed Bold;
+                }
+
+                p.box-description {
+                    letter-spacing: 0;
+                    color: #D0FF14;
+                    opacity: 1;
+                    font-size: 16px;
+                    line-height: 21px;
+                    width: 10rem;
+                    font-family: Raleway, ExtraBold;
+                    font-weight: 800;
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        section.about-section {
+            .row-line {
+                padding: 0px 0;
+            }
+
+            img.group-527 {
+                position: absolute;
+                top: -12rem;
+                width: 100%;
+            }
+
+            img.path-209 {
+                /* width: 700px; */
+                position: absolute;
+                top: 0rem;
+                left: -15%;
+                width: 100%;
+            }
+
+            img.group-290 {
+                width: 100%;
+                position: absolute;
+                right: 0%;
+                top: 0rem;
+            }
+
+            img.group-529 {
+                position: absolute;
+                top: 10rem;
+                right: 7rem;
+                width: 100px;
+            }
+
+            img.path-239 {
+                position: absolute;
+                right: 0%;
+                bottom: -8rem;
+                width: 95%;
+            }
+
+            img.path-238 {
+                position: absolute;
+                left: 0%;
+                width: 60%;
+                bottom: -5rem;
+            }
+
+            img.path-214 {
+                position: absolute;
+                left: 0%;
+                top: 0rem;
+                width: 100%;
+            }
+
+            img.group-520 {
+                position: absolute;
+                top: 13rem;
+                right: 10rem;
+                width: 100px;
+            }
+
+            img.group-498 {
+                position: absolute;
+                top: 11rem;
+                right: 10rem;
+                width: 100px;
+            }
+
+            img.group-331 {
+                position: absolute;
+                top: 2rem;
+                right: 11.5rem;
+                width: 55px;
+            }
+        }
+
+        section.tabs-section {
+            padding: 0 0;
+            margin: 0;
+            /* width: 100%; */
+            background-size: 275% 99% !important;
+            padding-bottom: 13.5rem;
+            position: relative;
+            z-index: 9999;
+            bottom: -5rem;
+            /* right: 0px; */
+            background-position: bottom 4px right 55% !important;
+
+            ul.nav.nav-tabs {
+                li {
+                    width: 30% !important;
+                }
+            }
         }
     }
 

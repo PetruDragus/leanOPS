@@ -2,7 +2,7 @@
     <div id="footer">
         <div class="container">
             <div class="row mobile-reverse">
-                <div class="col-md-8">
+                <div class="col-sm-8 col-md-8">
                     <div class="container mobile-reverse">
                         <div class="row mobile-reverse">
                             <div class="col-md-4 ft-copyright-column">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 ft-list text-center">
+                <div class="col-sm-4 col-md-4 ft-list text-center">
                     <div class="mobile-reverse">
                         <img class="footer-image" :src="'/images/superjobb.png'">
 
@@ -220,7 +220,7 @@
     }
 
     // Small devices
-    @media only screen and (max-width: 797px) {
+    @media only screen and (max-width: 767px) {
         div#footer {
             padding: 70px 0 55px 0;
 
@@ -275,5 +275,12 @@
                 flex-direction: column-reverse;
             }
         }
+    }
+
+    // Medium screens (iPad)
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+
     }
 </style>

@@ -25,14 +25,14 @@
                     <div class="col-md-10">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-sm-4 col-md-4">
                                     <h1 class="left-wrapper-title">
                                         Must
                                         <span class="sub">(Required)</span>
                                     </h1>
                                 </div>
 
-                                <div class="col-md-8 z-index-top">
+                                <div class="col-sm-8 col-md-8 z-index-top">
                                     <ul>
                                         <li>Previous experience with large-scale, high-availability, business critical, asynchronous, distributed systems</li>
                                         <li>A strong background with Linux/Unix; 5+ years' experience in Linux Administration (Redhat, Ubuntu, CentOS)</li>
@@ -62,14 +62,14 @@
                     <div class="col-md-10">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-sm-4 col-md-4">
                                     <h1 class="left-wrapper-title">
                                         Should
                                         <span class="sub">(Recommended)</span>
                                     </h1>
                                 </div>
 
-                                <div class="col-md-8">
+                                <div class="col-sm-8 col-md-8">
                                     <ul>
                                         <li>Bachelor's Degree in Computer Science or Information Systems Management</li>
                                         <li>Strong focus on self-education and self-motivation, team player with a keen desire to help others</li>
@@ -94,14 +94,14 @@
                     <div class="col-md-10">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-sm-4 col-md-4">
                                     <h1 class="left-wrapper-title">
                                         May
                                         <span class="sub">(Optional/Bonus Points)</span>
                                     </h1>
                                 </div>
 
-                                <div class="col-md-8">
+                                <div class="col-sm-8 col-md-8">
                                     <ul>
                                         <li>Bachelor's Degree in Computer Science or Information Systems Management</li>
                                         <li>Strong focus on self-education and self-motivation, team player with a keen desire to help others</li>
@@ -122,20 +122,20 @@
 
         <section id="page-responsibilities">
 
-            <img class="green-line-three z-index-top" :src="'/images/Path258.svg'">
+            <img class="green-line-three z-index-top d-none d-sm-block" :src="'/images/Path258.svg'">
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-sm-6 col-md-6">
                                     <h1 class="left-wrapper-title">
                                         Responsibilities:
                                     </h1>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-sm-6 col-md-6">
                                     <ul>
                                         <li>Bachelor's Degree in Computer Science or Information Systems Management</li>
                                         <li>Strong focus on self-education and self-motivation, team player with a keen desire to help others</li>
@@ -155,7 +155,7 @@
         </section>
 
         <section id="page-form">
-            <img class="last-line" :src="'/images/Path302.svg'">
+            <img class="last-line d-none d-sm-block" :src="'/images/Path302.svg'">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -317,9 +317,9 @@
 
         img.green-line-three {
             position: absolute;
-            top: -12%;
-            width: 20%;
-            left: 5%;
+            top: -4%;
+            left: 2%;
+            width: 15%;
         }
     }
 
@@ -421,5 +421,49 @@
                 }
             }
         }
+
+        section {
+            padding: 50px 0;
+
+            h1.left-wrapper-title {
+                font-size: 36px !important;
+                line-height: 28px !important;
+                z-index: 999;
+                margin-bottom: 20px;
+            }
+
+            span.sub {
+                font-size: 21px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            img.green-number-one {
+                position: absolute;
+                top: -85%;
+                right: -15%;
+                width: 90%;
+            }
+
+            img.green-number-second {
+                width: 150%;
+                position: absolute;
+                top: -62%;
+                left: -14rem;
+            }
+        }
+
+        section#page-form {
+            padding: 80px 0 80px 0 !important;
+        }
+    }
+
+    // Medium screens (iPad)
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+
     }
 </style>

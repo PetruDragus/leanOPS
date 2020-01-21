@@ -4,7 +4,9 @@
             <router-link to="/">
                 <img class="navbar-logo" :src="'/images/logo.svg'">
             </router-link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" @click.stop="toggleNavbar()">
+            <button class="navbar-toggler d-lg-none d-xl-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" @click.stop="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" v-bind:class="{ 'show': show }">
@@ -52,8 +54,18 @@
             width: 130px;
         }
 
-        span.navbar-toggler-icon {
-            border-bottom: 1px solid #1E1E1E;
+        button.navbar-toggler {
+            display: grid;
+
+            span.navbar-toggler-icon {
+                border-bottom: 2px solid #1E1E1E;
+                height: 1px !important;
+                padding-bottom: 5px;
+
+                &:first-child {
+                    width: 70%;
+                }
+            }
         }
 
         li.nav-item {

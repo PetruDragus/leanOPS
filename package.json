@@ -15,7 +15,7 @@
     "popper.js": "^1.16.0",
     "vue": "^2.6.10",
     "vue-carousel": "^0.18.0",
-    "vue-foldable": "https://github.com/DragusPatrick/vue-foldable.git",
+    "vue-foldable": "^1.0.0",
     "vue-owl-carousel": "^2.0.3",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.1.5",

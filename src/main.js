@@ -32,11 +32,6 @@ import VueFoldable from 'vue-foldable'
 import 'vue-foldable/dist/vue-foldable.css'
 Vue.component('foldable', VueFoldable)
 
-import comp from '@vue-foldable/baidu'
-import '@vue-foldable/baidu/dist/baidu.css'
-
-Vue.component('baidu-foldable', comp)
-
 new Vue({
   router,
   render: h => h(App),

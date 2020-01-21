@@ -14,8 +14,8 @@
 </template>
 
 <script>
-    import Navbar from '../src/partials/navbar'
-    import Footer from '../src/partials/footer'
+    import Navbar from './components/navbar'
+    import Footer from './components/footer'
 
     export default {
         components: {

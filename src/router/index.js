@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter);
 
-import Home from '../components/views/home'
-import Page from '../components/views/page'
+import Home from '../views/home'
+import Page from '../views/page'
 
 const router = new VueRouter({
     mode: 'history',
