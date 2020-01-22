@@ -32,7 +32,7 @@
 
 <style lang="scss">
     * {
-        font-family: Raleway, bold;
+        font-family: Raleway;
     }
     ul {
         padding: 0;
@@ -47,7 +47,7 @@
     }
 
     span.bold {
-        font-family: Raleway ExtraBold;
+        font-family: Raleway;
         font-weight: 800;
     }
 
