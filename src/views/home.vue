@@ -18,7 +18,7 @@
 
             <img class="left-line d-sm-none" :src="'/images/Group21.svg'">
             <img class="second-line d-none d-sm-block" :src="'/images/Path183.svg'">
-            <img class="second-line d-md-none d-lg-none" :src="'/images/Path360.svg'">
+            <img class="second-line d-md-none d-lg-none hide-medium" :src="'/images/Path360.svg'">
         </section>
 
         <section class="why-devops">
@@ -553,7 +553,7 @@
                 <div class="d-none d-sm-block">
                     <form-wizard color="#D0FF14" title="" subtitle="" >
                         <tab-content>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center height-21-rem">
                                 <div class="col-md-4 slider-half-part">
                                     <h1 class="slider-list-title">Company Type</h1>
 
@@ -595,7 +595,7 @@
                             </div>
                         </tab-content>
                         <tab-content>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center height-21-rem">
                                 <div class="col-md-4 slider-half-part">
                                     <h1 class="slider-list-title">Lorem ipsum</h1>
 
@@ -633,7 +633,7 @@
                             </div>
                         </tab-content>
                         <tab-content>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center height-21-rem">
                                 <div class="col-md-4 slider-half-part">
                                     <h1 class="slider-list-title">Lorem </h1>
 
@@ -758,12 +758,13 @@
                     line-height: 60px;
                     width: 350px;
                     margin-bottom: 15px;
-                    font-family: Raleway Medium;
+                    font-family: Raleway;
+                    font-weight: 500;
                 }
 
                 p.section-subtitle {
                     margin-bottom: 10px;
-                    font-family: Roboto Roboto;
+                    font-family: Roboto Condensed;
                     font-size: 18px;
                     line-height: 26px;
                 }
@@ -779,6 +780,7 @@
             left: 7%;
             height: 80%;
             top: 50%;
+            opacity: 50%;
         }
 
         img.second-line {
@@ -786,6 +788,7 @@
             right: 32%;
             top: 73%;
             width: 250px;
+            opacity: 50%;
         }
 
         .section-content {
@@ -806,6 +809,7 @@
             top: -25%;
             right: 7rem;
             width: 135px;
+            opacity: 50%;
         }
 
         img.middle-line {
@@ -813,6 +817,7 @@
             position: absolute;
             top: -35%;
             left: 45%;
+            opacity: 50%;
         }
 
         img.line-166 {
@@ -820,6 +825,7 @@
             top: -15%;
             width: 175px;
             left: 6%;
+            opacity: 50%;
         }
     }
 
@@ -835,8 +841,8 @@
             line-height: 37px;
             text-align: center;
             margin-bottom: 50px;
-            font-family: raleway, medium;
-            font-weight: 800;
+            font-family: Raleway;
+            font-weight: 500;
         }
 
         .green-box {
@@ -845,7 +851,7 @@
                 color: #D0FF14;
                 /* line-height: 21px; */
                 font-weight: 500;
-                font-family: Roboto, Condensed Bold;
+                font-family: Roboto, Condensed;
             }
 
             p.box-description {
@@ -855,7 +861,7 @@
                 font-size: 19px;
                 line-height: 28px;
                 width: 10rem;
-                font-family: Raleway, ExtraBold;
+                font-family: Raleway;
                 font-weight: 800;
             }
         }
@@ -865,6 +871,7 @@
             width: 240px;
             top: -11.7rem;
             left: 4rem;
+            opacity: 50%;
         }
 
         span.dark-section-source {
@@ -901,6 +908,7 @@
             position: absolute;
             top: -18.5rem;
             width: 600px;
+            opacity: 50%;
         }
 
         img.group-331 {
@@ -918,6 +926,7 @@
             top: -5rem;
             left: -15%;
             width: 90%;
+            opacity: 50%;
         }
 
         img.group-498 {
@@ -936,6 +945,7 @@
             position: absolute;
             right: -12%;
             top: -4rem;
+            opacity: 50%;
         }
 
         img.group-529 {
@@ -951,6 +961,7 @@
             position: absolute;
             left: -15%;
             top: -4rem;
+            opacity: 50%;
             width: 95%;
         }
 
@@ -968,6 +979,7 @@
             position: absolute;
             left: -15%;
             width: 65%;
+            opacity: 50%;
             bottom: -5rem;
         }
 
@@ -979,6 +991,7 @@
             right: -12%;
             bottom: -5rem;
             width: 95%;
+            opacity: 50%;
         }
     }
 
@@ -991,7 +1004,7 @@
             opacity: 1;
             line-height: 67px;
             margin-bottom: 55px;
-            font-family: Raleway, ExtraBold;
+            font-family: Raleway;
             font-weight: 800;
         }
 
@@ -1018,10 +1031,9 @@
             letter-spacing: 0;
             color: #1E1E1E;
             opacity: 1;
-            font-weight: 600;
             line-height: 67px;
             margin-bottom: 20px;
-            font-family: Raleway, ExtraBold;
+            font-family: Raleway;
             font-weight: 800;
         }
 
@@ -1075,7 +1087,7 @@
                     opacity: 1;
                     font-size: 37px;
                     line-height: 50px;
-                    font-family: Raleway bold;
+                    font-family: Raleway;
                     font-weight: 700;
                 }
 
@@ -1085,7 +1097,8 @@
                     opacity: 1;
                     font-size: 21px;
                     line-height: 28px;
-                    font-family: Raleway medium;
+                    font-family: Raleway;
+                    font-weight: 500;
                 }
             }
 
@@ -1113,7 +1126,7 @@
             h3 {
                 font-size: 26px;
                 line-height: 37px;
-                font-family: Raleway, bold;
+                font-family: Raleway;
                 font-weight: 700;
             }
 
@@ -1131,9 +1144,9 @@
 
         h1.section-title {
             color: #D0FF14;
-            font-weight: 700;
             text-align: center;
-            font-family: Raleway ExtraBold;
+            font-family: Raleway;
+            font-weight: 800;
         }
 
         .sub-header {
@@ -1146,7 +1159,8 @@
                 line-height: 37px;
                 font-weight: 600;
                 color: #ECECEC;
-                font-family: Raleway ExtraBold;
+                font-family: Raleway;
+                font-weight: 800;
             }
 
             p {
@@ -1167,8 +1181,8 @@
                 opacity: 1;
                 font-size: 28px;
                 line-height: 37px;
-                font-family: Raleway bold;
-                font-weight: 500;
+                font-family: Raleway;
+                font-weight: 700;
                 margin-bottom: 30px;
             }
 
@@ -1268,13 +1282,6 @@
             font-family: Raleway;
         }
 
-        /*.wizard-progress-bar {*/
-        /*    width: 69% !important;*/
-        /*    text-align: center !important;*/
-        /*    margin-left: 15% !important;*/
-
-        /*}*/
-
         .wizard-progress-with-circle {
             position: relative;
             top: 50px !important;
@@ -1357,6 +1364,7 @@
                 position: absolute;
                 top: 27rem;
                 left: 0.7rem;
+                opacity: 50%;
             }
         }
 
@@ -1376,6 +1384,7 @@
                 width: 35%;
                 right: 2rem;
                 top: -6rem;
+                opacity: 50%;
             }
         }
 
@@ -1446,6 +1455,7 @@
                 right: 0rem;
                 bottom: -9em;
                 width: 140px;
+                opacity: 50%;
             }
 
             img.dark-half-first {
@@ -1453,6 +1463,7 @@
                 right: 0rem;
                 top: -11rem;
                 width: 150px;
+                opacity: 50%;
             }
         }
 
@@ -1611,8 +1622,8 @@
 
     // Medium screens (iPad)
     @media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px) {
+    and (min-width : 768px)
+    and (max-width : 1024px) {
         .main {
             .hero-area {
                 padding: 150px 0;
@@ -1630,6 +1641,7 @@
                 right: 8%;
                 top: 71%;
                 width: 250px;
+                display: none !important;
             }
         }
 
@@ -1643,10 +1655,7 @@
 
         section.leanOps-comes-in {
             img.middle-line {
-                width: 115px;
-                position: absolute;
-                top: -46%;
-                left: 44%;
+                display: none !important;
             }
 
             img.line-166 {
@@ -1654,12 +1663,14 @@
                 top: -15%;
                 width: 175px;
                 left: 4%;
+                display: none !important;
             }
 
             img.third-line {
                 position: absolute;
                 top: -50%;
                 right: 3rem;
+                display: none !important;
                 width: 115px;
             }
         }
@@ -1703,6 +1714,7 @@
                 position: absolute;
                 top: -12rem;
                 width: 100%;
+                display: none !important;
             }
 
             img.path-209 {
@@ -1711,6 +1723,7 @@
                 top: 0rem;
                 left: -15%;
                 width: 100%;
+                display: none !important;
             }
 
             img.group-290 {
@@ -1718,6 +1731,7 @@
                 position: absolute;
                 right: 0%;
                 top: 0rem;
+                display: none !important;
             }
 
             img.group-529 {
@@ -1746,6 +1760,7 @@
                 left: 0%;
                 top: 0rem;
                 width: 100%;
+                display: none !important;
             }
 
             img.group-520 {
@@ -1790,7 +1805,31 @@
         }
     }
 
+    // Custom width (iPad)
+    @media only screen
+    and (min-width : 568px)
+    and (max-width : 767px) {
+        .hide-medium {
+            display: none !important;
+        }
+
+        div#footer {
+
+        }
+    }
+
+    @media (max-width: 767px) {
+        .vue-form-wizard.md {
+            display: none !important;
+        }
+    }
+
     .pt-50 {
         padding-top: 50px;
+    }
+
+    .height-21-rem {
+        height: 21rem !important;
+        min-height: 21rem !important;
     }
 </style>

@@ -2,7 +2,7 @@
     <div id="footer">
         <div class="container">
             <div class="row mobile-reverse">
-                <div class="col-sm-8 col-md-8">
+                <div class="col-sm-12 col-md-8">
                     <div class="container mobile-reverse">
                         <div class="row mobile-reverse">
                             <div class="col-md-4 ft-copyright-column">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 col-md-4 ft-list text-center">
+                <div class="col-12 col-sm-12 col-md-4 ft-list text-center ft-img-wrap">
                     <div class="mobile-reverse">
                         <img class="footer-image" :src="'/images/superjobb.png'">
 
@@ -74,7 +74,7 @@
                         <p class="medium-text">Check out our requirements and see if you can take <span class="bold">the next Super job</span></p>
                     </div>
 
-                    <a class="btn white-round-btn">Open Requirements</a>
+                    <router-link to="/page" class="btn white-round-btn">Open Requirements</router-link>
                 </div>
             </div>
         </div>
@@ -112,14 +112,14 @@
             margin-top: 10px;
 
             h1 {
-                font-family: Raleway, bold;
+                font-family: Raleway;
                 letter-spacing: 0;
                 color: #1E1E1E;
                 opacity: 1;
                 font-size: 21px;
                 line-height: 28px;
                 margin-bottom: 30px;
-                font-weight: 600;
+                font-weight: 700;
             }
 
             p {
@@ -157,7 +157,8 @@
                     font-size: 13px;
                     line-height: 21px;
                     padding: 6px 25px;
-                    font-family: Roboto medium;
+                    font-family: Roboto;
+                    font-weight: 500;
                     margin-left: -30px;
                 }
             }
@@ -169,7 +170,7 @@
                 padding-top: 10px;
                 font-size: 21px;
                 line-height: 28px;
-                font-family: Raleway Bold;
+                font-family: Raleway;
                 font-weight: 700;
             }
 
@@ -202,9 +203,9 @@
 
                 p.bold-text {
                     font-size: 21px !important;
-                    font-weight: 600 !important;
                     text-align: left;
-                    font-family: Raleway Bold;
+                    font-family: Raleway;
+                    font-weight: 700;
                 }
 
                 p.medium-text {
@@ -281,6 +282,10 @@
     @media only screen
     and (min-device-width : 768px)
     and (max-device-width : 1024px) {
-
+        .ft-img-wrap {
+            p.bold-text {
+                width: 90%;
+            }
+        }
     }
 </style>

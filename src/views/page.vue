@@ -232,10 +232,9 @@
 
         p.intro-subtitle {
             font-size: 28px;
-            font-weight: 700;
             line-height: 37px;
-            font-family: Raleway, ExtraBold;
-
+            font-family: Raleway;
+            font-weight: 800;
         }
     }
 
@@ -267,7 +266,6 @@
 
         span.sub {
             font-size: 28px;
-
         }
 
         ul {
@@ -348,7 +346,8 @@
                 font-size: 13px;
                 line-height: 21px;
                 padding: 7px 25px;
-                font-family: Roboto medium;
+                font-family: Roboto;
+                font-weight: 500;
             }
         }
 
