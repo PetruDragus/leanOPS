@@ -10,17 +10,21 @@
         <vue-progress-bar></vue-progress-bar>
 
         <app-footer></app-footer>
+
+        <go-top></go-top>
     </div>
 </template>
 
 <script>
     import Navbar from './components/navbar'
     import Footer from './components/footer'
+    import GoTop from '@inotom/vue-go-top';
 
     export default {
         components: {
-            'app-nav': Navbar,
-            'app-footer': Footer,
+            'app-nav'    : Navbar,
+            'app-footer' : Footer,
+            'go-top'     : GoTop
         },
         name: 'app',
         mounted () {
@@ -81,5 +85,15 @@
                 }
             }
         }
+    }
+
+    .vue-go-top {
+        background-color: #E5E5E5 !important;
+        border-radius: 0 !important;
+        outline: none !important;
+        width: 50px !important;
+        opacity: 0.9 !important;
+        height: 50px !important;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px !important;
     }
 </style>
