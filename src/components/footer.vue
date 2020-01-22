@@ -287,5 +287,9 @@
                 width: 90%;
             }
         }
+
+        .white-round-btn {
+            padding: 6px 45px !important;
+        }
     }
 </style>

@@ -11,17 +11,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" v-bind:class="{ 'show': show }">
                 <ul class="navbar-nav mr-auto navbar-links main-nav" style="margin-left: auto;">
-                    <li class="nav-item">
-                        <a class="nav-link" to="/">Why outsource</a>
+                    <li class="nav-item" v-scroll-to="'#why-devops'">
+                        <router-link class="nav-link" to="/">Why outsource</router-link>
                     </li>
                     <li class="nav-item" v-scroll-to="'#about-section'">
-                        <a class="nav-link" to="/page">What you get</a>
+                        <router-link to="/" class="nav-link" >What you get</router-link>
                     </li>
                     <li class="nav-item" v-scroll-to="'#tabs-section'">
-                        <a class="nav-link" href="/portfolio">What we do</a>
+                        <router-link to="/" class="nav-link">What we do</router-link>
                     </li>
                     <li class="nav-item" v-scroll-to="'#stepper-section'">
-                        <a class="nav-link" href="/contact">Working with us</a>
+                        <router-link to="/" class="nav-link">Working with us</router-link>
                     </li>
                 </ul>
             </div>
@@ -39,6 +39,12 @@
         methods: {
             toggleNavbar() {
                 this.show = !this.show
+            },
+            scrollMeTo(refName) {
+                var element = this.$refs[refName];
+                var top = element.offsetTop;
+
+                window.scrollTo(0, top);
             }
         }
     }
@@ -79,10 +85,6 @@
                 font-family: Raleway, bold;
                 font-weight: 700;
             }
-        }
-
-        a.nav-link.router-link-exact-active.router-link-active {
-            opacity: 100%;
         }
     }
 

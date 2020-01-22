@@ -21,7 +21,7 @@
             <img class="second-line d-md-none d-lg-none hide-medium" :src="'/images/Path360.svg'">
         </section>
 
-        <section class="why-devops">
+        <section id="why-devops" class="why-devops">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 mx-auto">
@@ -128,7 +128,7 @@
             <span class="dark-section-source d-none d-sm-block">*puppet State of DevOps Report, 2019</span>
         </section>
 
-        <section id="about-section" class="about-section">
+        <section ref="about-section" id="about-section" class="about-section">
             <div class="container">
                 <div class="row row-line reverse">
                     <div class="col-md-6 text-box">
@@ -756,7 +756,7 @@
                     font-size: 50px;
                     color: #1E1E1E;
                     line-height: 60px;
-                    width: 350px;
+                    width: 90%;
                     margin-bottom: 15px;
                     font-family: Raleway;
                     font-weight: 500;
