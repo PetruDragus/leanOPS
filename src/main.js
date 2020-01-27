@@ -1,4 +1,8 @@
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 import App from './App.vue'
 
 Vue.config.productionTip = false
@@ -52,6 +56,15 @@ Vue.use(VueScrollTo, {
 import VueFormWizard from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 Vue.use(VueFormWizard)
+
+import VoerroTagsInput from '@voerro/vue-tagsinput';
+Vue.component('tags-input', VoerroTagsInput);
+
+import ToggleButton from 'vue-js-toggle-button'
+Vue.use(ToggleButton)
+
+import VueSwal from 'vue-swal'
+Vue.use(VueSwal)
 
 new Vue({
   router,

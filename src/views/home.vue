@@ -474,192 +474,138 @@
                     </p>
                 </div>
 
-                <!-- Display on small devices -->
-                <div class="d-md-none d-lg-none d-xl-none mx-auto text-center">
-                    <carousel :autoplay="false" :nav="false" :dots="true" :items="1">
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 slider-half-part">
-                                <h1 class="slider-list-title">02. Assignment Duration</h1>
-
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">3 - 6 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">6 - 12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12+ months</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 slider-half-part">
-                                <h1 class="slider-list-title">02. Assignment Duration</h1>
-
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">3 - 6 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">6 - 12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12+ months</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 slider-half-part">
-                                <h1 class="slider-list-title">02. Assignment Duration</h1>
-
-                                <ul>
-                                    <li>
-                                        <a class="btn slider-btn">3 - 6 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">6 - 12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12 months</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="btn slider-btn">12+ months</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </carousel>
-                </div>
-
                 <!-- Display on large devices -->
-                <div class="d-none d-sm-block">
-                    <form-wizard color="#D0FF14" title="" subtitle="" >
-                        <tab-content>
-                            <div class="row justify-content-center height-21-rem">
-                                <div class="col-md-4 slider-half-part">
-                                    <h1 class="slider-list-title">Company Type</h1>
+                <div class="d-sm-block">
+                    <form>
+                        <form-wizard color="#D0FF14" title="" subtitle="" @on-complete="createForm()">
+                            <tab-content>
+                                <div class="row justify-content-center height-21-rem">
+                                    <div class="col-md-4 slider-half-part">
+                                        <h1 class="slider-list-title">Company Type</h1>
 
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">Startup</a>
-                                        </li>
+                                        <ul class="ct-form-list ct-select-first">
+                                            <li>
+                                                <input v-model="form.company_type" type="radio" id="startup" name="company_type" value="StartUp">
+                                                <label for="startup">StartUp</label>
+                                            </li>
 
-                                        <li>
-                                            <a class="btn slider-btn">Small and midsize business</a>
-                                        </li>
+                                            <li>
+                                                <input v-model="form.company_type" type="radio" id="small" name="drone" value="Small and midsize bussiness">
+                                                <label for="small">Small and midsize business</label>
+                                            </li>
 
-                                        <li>
-                                            <a class="btn slider-btn">Enterprise</a>
-                                        </li>
-                                    </ul>
+                                            <li>
+                                                <input v-model="form.company_type" type="radio" id="Enterprise" name="drone" value="Enterprise">
+                                                <label for="Enterprise">Enterprise</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4  slider-half-part">
+                                        <h1 class="slider-list-title">Assignment Duration</h1>
+
+                                        <ul class="ct-form-list ct-select-one">
+                                            <li>
+                                                <input v-model="form.duration" type="radio" id="min" name="drone" value="3 - 6">
+                                                <label for="min">3 - 6 months</label>
+                                            </li>
+
+                                            <li>
+                                                <input v-model="form.duration" type="radio" id="medium" name="drone" value="6 - 12">
+                                                <label for="medium">6 - 12 months</label>
+                                            </li>
+
+                                            <li>
+                                                <input v-model="form.duration" type="radio" id="max" name="drone" value="12">
+                                                <label for="max">12 months</label>
+                                            </li>
+
+                                            <li>
+                                                <input v-model="form.duration" type="radio" id="large" name="drone" value="12+">
+                                                <label for="large">12+ months</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="col-md-4  slider-half-part">
-                                    <h1 class="slider-list-title">Assignment Duration</h1>
+                            </tab-content>
+                            <tab-content>
+                                <div class="row justify-content-center height-21-rem">
+                                    <div class="col-md-8 slider-half-part">
+                                        <h1 class="slider-list-title">Core skills</h1>
 
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">3 - 6 months</a>
-                                        </li>
+                                        <div class="">
+                                            <div class="form-group">
+                                                <tags-input element-id="tags"
+                                                            v-model="form.tags"
+                                                            :tags="tags"
+                                                            placeholder="Add core skills"
+                                                            :existing-tags="tags"
+                                                            :typeahead="true">
+                                                </tags-input>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                        <li>
-                                            <a class="btn slider-btn">6 - 12 months</a>
-                                        </li>
+                                    <div class="row col-md-8 slider-half-part">
+                                        <div class="col-md-6 slider-half-part">
+                                            <h1 class="slider-list-title">Travel required</h1>
 
-                                        <li>
-                                            <a class="btn slider-btn">12 months</a>
-                                        </li>
+                                            <div class="group">
+                                                <toggle-button :value="false"
+                                                               v-model="form.travel_required"
+                                                               :labels="{checked: 'Yes', unchecked: 'Not'}"/>
+                                            </div>
+                                        </div>
 
-                                        <li>
-                                            <a class="btn slider-btn">12+ months</a>
-                                        </li>
-                                    </ul>
+                                        <div class="col-md-6 slider-half-part">
+                                            <h1 class="slider-list-title">Estimate daily budget</h1>
+
+                                            <div class="group">
+                                                <span class="select-wrapper">
+                                                    <select v-model="form.daily_budget" class="form-control bodget-select">
+                                                        <option value="" selected disabled hidden>Choose ..</option>
+                                                        <option value="100">100$</option>
+                                                        <option value="300">300$</option>
+                                                        <option value="600">600$</option>
+                                                        <option value="900">900$</option>
+                                                        <option value="1200">1200$</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </tab-content>
-                        <tab-content>
-                            <div class="row justify-content-center height-21-rem">
-                                <div class="col-md-4 slider-half-part">
-                                    <h1 class="slider-list-title">Lorem ipsum</h1>
+                            </tab-content>
+                            <tab-content>
+                                <div class="row justify-content-center height-21-rem">
+                                    <div class="col-md-8 slider-half-part">
+                                        <h1 class="slider-list-title">Contact Data</h1>
 
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">Startup</a>
-                                        </li>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input v-model="form.name" name="name" class="form-input" placeholder="Name" />
+                                                </div>
 
-                                        <li>
-                                            <a class="btn slider-btn">Small and midsize business</a>
-                                        </li>
+                                                <div class="form-group">
+                                                    <input v-model="form.phone" name="phone" class="form-input" placeholder="Phone no." />
+                                                </div>
+                                            </div>
 
-                                        <li>
-                                            <a class="btn slider-btn">Enterprise</a>
-                                        </li>
-                                    </ul>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input v-model="form.email" name="email" class="form-input" placeholder="Email address" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input v-model="form.website" name="website" class="form-input" placeholder="website" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4  slider-half-part">
-                                    <h1 class="slider-list-title">Dolor sit met</h1>
-
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">Startup</a>
-                                        </li>
-
-                                        <li>
-                                            <a class="btn slider-btn">Small and midsize business</a>
-                                        </li>
-
-                                        <li>
-                                            <a class="btn slider-btn">Enterprise</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </tab-content>
-                        <tab-content>
-                            <div class="row justify-content-center height-21-rem">
-                                <div class="col-md-4 slider-half-part">
-                                    <h1 class="slider-list-title">Lorem </h1>
-
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">Enterprise</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4  slider-half-part">
-                                    <h1 class="slider-list-title">Ipsum dolor met</h1>
-
-                                    <ul>
-                                        <li>
-                                            <a class="btn slider-btn">3 - 6 months</a>
-                                        </li>
-
-                                        <li>
-                                            <a class="btn slider-btn">12+ months</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </tab-content>
-                    </form-wizard>
-
+                            </tab-content>
+                        </form-wizard>
+                    </form>
                 </div>
             </div>
 
@@ -669,24 +615,59 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+    import { Form, HasError, AlertError } from 'vform'
+    Vue.component(HasError.name, HasError)
+    Vue.component(AlertError.name, AlertError)
 
-    import carousel from 'vue-owl-carousel'
+    import axios from 'axios'
+    import VueAxios from 'vue-axios'
+    Vue.use(VueAxios, axios)
 
     export default {
         name: 'app',
         components:
         {
-            carousel
+
         },
         data () {
             return {
-                isOpen: true
+                isOpen: true,
+                // Create a new form instance
+                form: new Form({
+                    company_type: '',
+                    duration:     '',
+                    name: '',
+                    email: '',
+                    phone: '',
+                    tags: [],
+                    website: '',
+                    daily_budget: '',
+                    travel_required: ''
+                }),
+                tags: []
             }
         },
         methods: {
             toggleAccordion: function() {
                 this.isOpen = !this.isOpen;
+            },
+            createForm() {
+                this.form.post('http://leanapi.blackhansa.de/api/forms')
+                    .then(function () {
+                        location.reload();
+                    })
+
+            },
+            loadTags() {
+                axios.get('http://leanapi.blackhansa.de/api/tags').then(({ data }) => (this.tags = data));
+            },
+            onComplete: function(){
+                alert('Yay. Done!');
             }
+        },
+        created() {
+            this.loadTags();
         },
         computed: {
             assetPath() {
@@ -698,12 +679,8 @@
             slide1image() {
                 return this.assetPath + "/images/Group532@2x.png";
             },
-            accordionClasses: function() {
-                return {
-                    'is-closed': !this.isOpen,
-                    'is-primary': this.isOpen,
-                    'is-dark': !this.isOpen
-                };
+            hasAdditional() {
+                return this.additional.length > 0
             }
         }
     }
@@ -716,6 +693,29 @@
                 /* tweak the mask's postion according to your view more's height */
                 bottom: 36px
             }
+        }
+    }
+
+
+
+    .ct-select-first {
+        input[type="radio"]:checked ~ * {
+            background:rgb(208, 255, 20) !important;
+            color: #1E1E1E !important;
+        }
+    }
+
+    .ct-select-one {
+        input[type="radio"]:checked ~ * {
+            background:rgb(208, 255, 20) !important;
+            color: #1E1E1E !important;
+        }
+    }
+
+    .ct-form-list {
+        input[type="radio"]:checked ~ * {
+            background:rgb(208, 255, 20) !important;
+            color: #1E1E1E !important;
         }
     }
 
@@ -1173,6 +1173,11 @@
             }
         }
 
+        input.selector:checked + label {
+            BACKGROUND: rgb(208, 255, 20);
+            color: #000 !important;
+        }
+
         .slider-half-part {
             h1.slider-list-title {
                 text-align: left;
@@ -1207,6 +1212,199 @@
                         }
                     }
                 }
+            }
+        }
+
+        p.typeahead-badges {
+            padding-top: 5px;
+
+            span.tags-input-badge.typeahead-hide-btn.tags-input-typeahead-item-default {
+                background: #495057;
+                color: #ECECEC;
+                margin-right: 5px;
+            }
+        }
+
+        ul.ct-form-list {
+            li {
+                input {
+                    opacity: 0;
+                }
+
+                label {
+                    border: 2px solid #D0FF14;
+                    border-radius: 37px;
+                    opacity: 1;
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-family: Roboto Condensed;
+                    letter-spacing: 0;
+                    color: #ECECEC;
+                    padding: 3px 35px;
+                    min-width: 11rem;
+                    text-align: left;
+
+                    &:hover {
+                        background: #D0FF14;
+                        color: #1E1E1E !important;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .group {
+            select {
+                background: transparent;
+                border: 2px solid rgb(208, 255, 20);
+                width: 50%;
+                font-size: 14px;
+                padding: 3px 20px !important;
+                font-family: Raleway;
+                font-weight: 600 !important;
+                color: #ECECEC;
+                box-sizing: border-box;
+                border-radius: 1em;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+        }
+
+        .v-switch-core {
+            background-color: #495057 !important;
+        }
+
+        span.v-switch-label.v-left {
+            color: rgb(208, 255, 20) !important;
+        }
+
+        .tags-input-root {
+            position: relative;
+
+            .tags-input-wrapper-default {
+                /*padding: .5rem .25rem;*/
+                /*background: #fff;*/
+                /*border: 1px solid transparent;*/
+                /*border-radius: .25rem;*/
+                /*border-color: #dbdbdb;*/
+                border-color: #dbdbdb;
+                border: 2px solid #D0FF14;
+                border-radius: 37px;
+                opacity: 1;
+                font-size: 14px;
+                line-height: 28px;
+                font-family: Roboto Condensed;
+                letter-spacing: 0;
+                color: #ECECEC;
+                padding: 3px 35px;
+                min-width: 11rem;
+                text-align: left;
+                background: transparent;
+            }
+
+            input[type="text"] {
+                color: #495057;
+            }
+
+            .tags-input {
+                span {
+                    margin-right: 0.3rem;
+                }
+
+                input {
+                    flex: 1;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-family: Roboto Condesed;
+                    font-size: 13px;
+                }
+            }
+
+            .tags-input-remove {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                width: 0.5rem;
+                height: 0.5rem;
+                overflow: hidden;
+                transform: rotate(45deg);
+
+                &:before {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .tags-input-remove:before,
+            .tags-input-remove:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                background: #5dc282;
+                height: 2px;
+                margin-top: -1px;
+            }
+
+            .tags-input-badge-selected-default {
+                color: #212529;
+                background-color: #f0f1f2;
+            }
+
+            .tags-input-badge-pill {
+                padding-right: 0.6em;
+                padding-left: 0.6em;
+                border-radius: 10rem;
+            }
+
+            .tags-input-typeahead-item-highlighted-default {
+                background-color: #f0f1f2;
+                opacity: 0.9;
+                color: #212529;
+                cursor: pointer;
+            }
+
+            .tags-input-badge {
+                display: inline-block;
+                padding: 0.50em 0.8em;
+                font-size: 75%;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: 0.25rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 35px;
+
+            label.form-label {
+                font-weight: 700;
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: space-between;
+                color: #ECECEC;
+            }
+
+            input.form-input {
+                background: transparent;
+                border: 2px solid #D0FF14;
+                border-radius: 37px;
+                opacity: 1;
+                font-size: 14px;
+                line-height: 28px;
+                font-family: Roboto Condensed;
+                letter-spacing: 0;
+                color: #ECECEC;
+                padding: 3px 35px;
+                min-width: 11rem;
+                text-align: left;
+                width: 100%;
+                outline: none !important;
             }
         }
 
@@ -1579,6 +1777,15 @@
 
         section.stepper-section {
             background-size: 109% 125% !important;
+            padding-bottom: 150px;
+
+            h1.section-title {
+                color: #F3F3F3;
+                text-align: center;
+                font-family: Raleway;
+                font-weight: 800;
+                font-size: 28px;
+            }
 
             .slider-half-part {
                 h1.slider-list-title {
@@ -1597,8 +1804,81 @@
                         a {
                             text-align: center !important;
                         }
+
+                        label {
+                            width: 90%;
+                            margin-left: -35px;
+                        }
                     }
                 }
+            }
+
+            .sub-header {
+                margin-top: 15px;
+                margin-bottom: 0px;
+                
+                h3 {
+                    display: none;
+                }
+            }
+
+            .wizard-tab-content {
+                margin-bottom: 50px;
+            }
+
+            .wizard-tab-content {
+                margin-top: -70px;
+            }
+
+            .slider-half-part {
+                ul li label {
+                    width: 90%;
+                    margin-left: -35px;
+                    width: 107%;
+                }
+
+                .group {
+                    text-align: center;
+
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .wizard-footer-left,
+            .wizard-footer-right {
+                width: 40%;
+            }
+
+            .wizard-progress-with-circle {
+                display: none;
+            }
+
+            ul.wizard-nav.wizard-nav-pills {
+                position: absolute;
+                bottom: 8%;
+                width: 80%;
+            }
+
+            .wizard-icon-circle {
+                width: 25px !important;
+                height: 25px !important;
+            }
+
+            .wizard-icon {
+                font-size: 14px !important;
+            }
+
+            div#step-0,
+            div#step-1,
+            div#step-2 {
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                background: transparent;
+                color: #ECECEC;
+                outline: none !important;
+                border: 2px solid rgb(208, 255, 20) !important;
             }
 
             .owl-dots {
@@ -1818,18 +2098,14 @@
         }
     }
 
-    @media (max-width: 767px) {
-        .vue-form-wizard.md {
-            display: none !important;
-        }
-    }
-
     .pt-50 {
         padding-top: 50px;
     }
 
-    .height-21-rem {
-        height: 21rem !important;
-        min-height: 21rem !important;
+    @media only (min-width: 769px) {
+        .height-21-rem {
+            height: 21rem !important;
+            min-height: 21rem !important;
+        }
     }
 </style>
