@@ -652,11 +652,13 @@
             toggleAccordion: function() {
                 this.isOpen = !this.isOpen;
             },
-            createForm() {
+            createForm(e) {
                 this.form.post('http://leanapi.blackhansa.de/api/forms')
                     .then(function () {
-                        location.reload();
+
                     })
+                this.$swal("Thank you, we'll get back to you soon");
+                e.preventDefault();
 
             },
             loadTags() {

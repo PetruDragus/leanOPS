@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg" v-bind:class=" { 'navbarOpen': show }">
+    <nav class="navbar navbar-expand-lg" v-bind:class=" { 'navbarOpen' : show }">
         <div class="container">
             <router-link to="/">
                 <img class="navbar-logo" :src="'/images/logo.svg'">
