@@ -80,7 +80,7 @@
             a {
                 color: #1E1E1E;
                 font-size: 16px;
-                opacity: 40%;
+                opacity: 0.4;
                 line-height: 28px;
                 font-family: Raleway, bold;
                 font-weight: 700;

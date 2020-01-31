@@ -458,11 +458,4 @@
             padding: 80px 0 80px 0 !important;
         }
     }
-
-    // Medium screens (iPad)
-    @media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px) {
-
-    }
 </style>

@@ -144,7 +144,7 @@
                     line-height: 21px;
                     letter-spacing: 0;
                     color: #1E1E1E;
-                    opacity: 0.54;
+                    opacity: 0.5;
                     width: 70%;
                     padding: 5px 25px;
                 }

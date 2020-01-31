@@ -740,7 +740,7 @@
 
                 p.header-subtitle {
                     font-size: 26px;
-                    opacity: 40%;
+                    opacity: 0.4;
                     padding: 0 70px;
                     line-height: 37px;
                     color: #1E1E1E;
@@ -782,7 +782,7 @@
             left: 7%;
             height: 80%;
             top: 50%;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.second-line {
@@ -790,7 +790,7 @@
             right: 32%;
             top: 73%;
             width: 250px;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         .section-content {
@@ -811,7 +811,7 @@
             top: -25%;
             right: 7rem;
             width: 135px;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.middle-line {
@@ -819,7 +819,7 @@
             position: absolute;
             top: -35%;
             left: 45%;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.line-166 {
@@ -827,7 +827,7 @@
             top: -15%;
             width: 175px;
             left: 6%;
-            opacity: 50%;
+            opacity: 0.5;
         }
     }
 
@@ -873,7 +873,7 @@
             width: 240px;
             top: -11.7rem;
             left: 4rem;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         span.dark-section-source {
@@ -886,7 +886,7 @@
             font-size: 16px;
             line-height: 21px;
             letter-spacing: 0;
-            opacity: 0.41;
+            opacity: 0.4;
             margin-left: 25px;
         }
     }
@@ -910,7 +910,7 @@
             position: absolute;
             top: -18.5rem;
             width: 600px;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.group-331 {
@@ -928,7 +928,7 @@
             top: -5rem;
             left: -15%;
             width: 90%;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.group-498 {
@@ -947,7 +947,7 @@
             position: absolute;
             right: -12%;
             top: -4rem;
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img.group-529 {
@@ -963,7 +963,7 @@
             position: absolute;
             left: -15%;
             top: -4rem;
-            opacity: 50%;
+            opacity: 0.5;
             width: 95%;
         }
 
@@ -981,7 +981,7 @@
             position: absolute;
             left: -15%;
             width: 65%;
-            opacity: 50%;
+            opacity: 0.5;
             bottom: -5rem;
         }
 
@@ -993,7 +993,7 @@
             right: -12%;
             bottom: -5rem;
             width: 95%;
-            opacity: 50%;
+            opacity: 0.5;
         }
     }
 
@@ -1018,7 +1018,6 @@
     section.tabs-section {
         padding: 0 0;
         margin: 0;
-        /* width: 100%; */
         background-size: 155% 99% !important;
         padding-bottom: 13.5rem;
         position: relative;
@@ -1285,11 +1284,6 @@
             position: relative;
 
             .tags-input-wrapper-default {
-                /*padding: .5rem .25rem;*/
-                /*background: #fff;*/
-                /*border: 1px solid transparent;*/
-                /*border-radius: .25rem;*/
-                /*border-color: #dbdbdb;*/
                 border-color: #dbdbdb;
                 border: 2px solid #D0FF14;
                 border-radius: 37px;
@@ -1453,7 +1447,7 @@
             }
 
             i.wizard-icon {
-                opacity: 19%;
+                opacity: 0.2;
             }
 
             .wizard-icon-container, wizard-icon-circle {
@@ -1495,7 +1489,7 @@
             div#step-2 {
                 .wizard-icon-container {
                     i.wizard-icon {
-                         opacity: 1.0;
+                         opacity: 1;
                     }
                 }
             }
@@ -1539,7 +1533,7 @@
 
                 p.header-subtitle {
                     font-size: 16px !important;
-                    opacity: 100% !important;
+                    opacity: 1 !important;
                     padding: 0 0 !important;
                     line-height: 21px !important;
                 }
@@ -1564,7 +1558,7 @@
                 position: absolute;
                 top: 27rem;
                 left: 0.7rem;
-                opacity: 50%;
+                opacity: 0.5;
             }
         }
 
@@ -1584,7 +1578,7 @@
                 width: 35%;
                 right: 2rem;
                 top: -6rem;
-                opacity: 50%;
+                opacity: 0.5;
             }
         }
 
@@ -1655,7 +1649,7 @@
                 right: 0rem;
                 bottom: -9em;
                 width: 140px;
-                opacity: 50%;
+                opacity: 0.5;
             }
 
             img.dark-half-first {
@@ -1663,7 +1657,7 @@
                 right: 0rem;
                 top: -11rem;
                 width: 150px;
-                opacity: 50%;
+                opacity: 0.5;
             }
         }
 
@@ -1720,6 +1714,7 @@
                     margin-top: 125px;
                     transition: max-height 0.3s;
                     max-height: 300px;
+                    overflow: hidden;
                 }
 
                 .vue-foldable-mask {
