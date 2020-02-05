@@ -698,7 +698,20 @@
         }
     }
 
+    input:focus,
+    button:focus {
+        outline: none;
+        border: none;
+    }
 
+    button.navbar-toggler::focus {
+        outline: none;
+        border: none;
+    }
+
+    .navbar button.navbar-toggler {
+       outline: none;
+    }
 
     .ct-select-first {
         input[type="radio"]:checked ~ * {
@@ -747,7 +760,7 @@
                 }
 
                 span {
-                    opacity: 100% !important;
+                    opacity: 1 !important;
                 }
             }
         }

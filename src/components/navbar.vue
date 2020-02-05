@@ -51,6 +51,21 @@
 </script>
 
 <style lang="scss">
+    input:focus,
+    button:focus {
+        outline: none;
+        border: none;
+    }
+
+    button.navbar-toggler::focus {
+        outline: none;
+        border: none;
+    }
+
+    .navbar button.navbar-toggler {
+       outline: none;
+    }
+    
     .navbar {
         background: #F3F3F3 0% 0% no-repeat padding-box;
         padding: 15px !important;

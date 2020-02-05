@@ -221,6 +221,21 @@
         overflow: hidden;
     }
 
+    input:focus,
+    button:focus {
+        outline: none;
+        border: none;
+    }
+
+    button.navbar-toggler::focus {
+        outline: none;
+        border: none;
+    }
+
+    .navbar button.navbar-toggler {
+       outline: none;
+    }
+
     div#header {
         height: 700px;
         width: 100%;
@@ -330,7 +345,7 @@
             input.form-input {
                 border: 1px solid #1E1E1E;
                 border-radius: 27px;
-                opacity: 0.14;
+                opacity: 0.4;
                 padding: 7px 25px;
                 outline: none !important;
                 font-size: 13px;
@@ -414,7 +429,7 @@
 
                 p.intro-subtitle {
                     font-size: 16px !important;
-                    opacity: 100% !important;
+                    opacity: 1 !important;
                     padding: 0 0 !important;
                     line-height: 21px !important;
                 }
