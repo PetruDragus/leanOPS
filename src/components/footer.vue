@@ -8,7 +8,7 @@
                             <div class="col-md-4 ft-copyright-column">
                                 <img class="footer-logo" :src="'/images/logo.svg'">
 
-                                <p class="ft-copyright">© Copyright 2019 LeanOps All rights reserved.</p>
+                                <p class="ft-copyright">© Copyright 2020 LeanOps All rights reserved.</p>
                             </div>
 
                             <div class="col-md-4 ft-list">
@@ -17,11 +17,11 @@
                                 <ul class="contact-details-list">
                                     <li>
                                         <img class="footer-icon" :src="'/images/location@2x.png'">
-                                        <span>7400 Briarwood Street West Chicago, IL 60185</span>
+                                        <span>16192 Coastal Hwy, Lewes, Delaware 19958, US</span>
                                     </li>
                                     <li>
                                         <img class="footer-icon" :src="'/images/smartphone@2x.png'">
-                                        <span>+1-202-555-0186 <br> leanops@office.com</span>
+                                        <span>+1-202-555-0186 <br> suuport@leanops.co</span>
                                     </li>
                                 </ul>
                             </div>
@@ -83,7 +83,7 @@
 
 <style lang="scss">
     div#footer {
-        background: #D0FF14 0% 0% no-repeat padding-box;
+        background: #F3F3F3 0% 0% no-repeat padding-box;
         opacity: 1;
         padding: 270px 0 210px 0;
 
