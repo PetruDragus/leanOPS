@@ -252,15 +252,15 @@
       <div class="container">
         <h1 class="section-title">Our partners</h1>
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center partner-logo_item">
             <img class="partner-logo" :src="'/images/partners/logo_uipath.svg'" />
           </div>
 
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center partner-logo_item">
             <img class="partner-logo" :src="'/images/partners/logo_capgemini.svg'" />
           </div>
 
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 text-center partner-logo_item">
             <img class="partner-logo" :src="'/images/partners/logo_sparkware.png'" />
           </div>
         </div>
@@ -289,26 +289,24 @@
               <div class="row">
                 <ul class="nav nav-tabs mx-auto">
                   <li class="active">
-                    <a data-toggle="tab" href="#public">
-                      <img class="tabs-img" :src="'/images/Group453.png'" />
+                    <a data-toggle="tab" href="#public" class="active">
+                      <img class="tabs-img" :src="'/images/star_gray.png'" />
                     </a>
                   </li>
                   <li>
                     <a data-toggle="tab" href="#private">
-                      <img class="tabs-img" :src="'/images/Group356.png'" />
+                      <img class="tabs-img" :src="'/images/trans@2x_gray.png'" />
                     </a>
                   </li>
                   <li>
                     <a data-toggle="tab" href="#hybrid">
-                      <img class="tabs-img" :src="'/images/Group357.png'" />
+                      <img class="tabs-img" :src="'/images/scale@2x_gray.png'" />
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
-          
 
           <div class="row">
             <div class="col-md-12">
@@ -1170,17 +1168,45 @@ section.tabs-section {
 
   .nav-tabs {
     border: none;
+
+    img {
+      width: 65px !important;
+    }
+
+    li {
+      margin-right: 15px;
+      margin: 0 25px;
+    }
+
+    a.active {
+        background: #584A79;
+        height: 100%;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 10px;
+        padding: 10px 15px;
+        -webkit-box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+        -moz-box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+        box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+    }
   }
 
   ul {
     margin-top: 20px;
 
-    img.tabs-img {
-      width: 154px;
-    }
-
     li {
       list-style: none;
+
+      a {
+        height: 100%;
+        box-sizing: border-box;
+        display: block;
+        border-radius: 10px;
+        padding: 10px 15px;
+        -webkit-box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+        -moz-box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+        box-shadow: 10px 6px 20px 1px rgba(226,226,226,1);
+      }
     }
   }
 
@@ -1632,6 +1658,10 @@ section.stepper-section {
   section {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+
+  .partner-logo_item {
+    margin: 25px 0;
   }
 
   .reverse {
